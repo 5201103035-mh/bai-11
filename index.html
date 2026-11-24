@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <script>
+        let vay = parseFloat(prompt("Nhập vào số tiền vay (đồng):"));
+        let laisuat = parseFloat(prompt("Nhập vào lãi suất (%/năm):"));
+        let nam = parseFloat(prompt("Nhập vào số năm vay:"));
+
+        if (isNaN(vay) || isNaN(laisuat) || isNaN(nam) || vay <= 0 || laisuat <= 0 || nam <= 0) {
+            alert("ERROR");
+        } else {
+            let plai = laisuat / 100;
+            let tongtien = vay + plai * vay * nam;
+            alert("Tổng tiền phải trả sau " + nam + " năm là: " + tongtien + " đồng");
+        }
+    </script>
+</body>
+</html>
